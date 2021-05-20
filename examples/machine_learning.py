@@ -23,7 +23,7 @@ import streamlit as st
 
 dataname = st.sidebar.selectbox("选择数据集", ['camel-1.0.csv', 'alizadeh.csv', 'ant-1.7.csv', 'CM1.csv', 'colic.csv', 'ionosphere.csv'], key='1')
 n_iteration = st.sidebar.slider("迭代次数", min_value=1, max_value=1000, value=100)
-x = pd.read_csv(dataname, encoding='utf-8', header=0)
+x = pd.read_csv("examples/"+dataname, encoding='utf-8', header=0)
 show_data = st.sidebar.checkbox("展示数据集")
 if show_data:
     st.write(x)
